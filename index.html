@@ -16,10 +16,10 @@
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
             background-color: #f7fafc; /* ライトグレーの背景 */
         }
-        /* --- メインカラーをビビッドピンク (#F43F5E / Rose 600) に変更 --- */
-        .text-primary { color: #F43F5E; } 
-        .bg-primary { background-color: #F43F5E; }
-        .text-secondary { color: #E11D48; } /* Rose 700 */
+        /* --- メインカラーをビビッドシアン (#06B6D4 / Cyan 500) に設定 --- */
+        .text-primary { color: #06B6D4; } 
+        .bg-primary { background-color: #06B6D4; }
+        .text-secondary { color: #0891B2; } /* Cyan 600 */ 
         .hover-lift:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -64,20 +64,19 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
                 <!-- テキストコンテンツ -->
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <p class="text-lg text-primary font-semibold mb-2">UI/UX & グラフィックデザイナー</p>
+                    <!-- 職種をキャラクターデザイナー＆イラストレーターに変更 -->
+                    <p class="text-lg text-primary font-semibold mb-2">キャラクターデザイナー＆イラストレーター</p>
                     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
-                        ビジョンを<span class="text-primary">デザイン</span>します。
+                        <span class="text-primary">カラフルなアイデア</span>で、世界に個性を。
                     </h1>
                     <p class="mt-6 text-xl text-gray-600 max-w-lg">
-                        ユーザー中心の思考とクリエイティブな視点を組み合わせ、機能的かつ美しいデジタル体験を創造します。
+                        多様な媒体に対応するキャラクターデザインと、アナログ表現を融合し、心に残る作品を創造します。
                     </p>
                     <div class="mt-8 space-x-4">
-                        <!-- ボタンのホバーカラーを Rose 700 に変更 -->
-                        <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-rose-700 transition duration-300 transform hover-lift">
+                        <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-cyan-700 transition duration-300 transform hover-lift">
                             作品を見る
                         </a>
-                        <!-- ボタンのホバーカラーを Rose 50 に変更 -->
-                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-medium rounded-full text-primary bg-white hover:bg-rose-50 transition duration-300 transform hover-lift">
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-medium rounded-full text-primary bg-white hover:bg-cyan-50 transition duration-300 transform hover-lift">
                             お問い合わせ
                         </a>
                     </div>
@@ -85,8 +84,8 @@
 
                 <!-- 画像/アバター (プレースホルダー) -->
                 <div class="md:w-1/3 flex justify-center">
-                    <!-- 画像プレースホルダー: 背景色をピンク系に変更 -->
-                    <img src="https://placehold.co/400x400/F43F5E/ffffff?text=Profile" alt="デザイナーのアバターまたはプロファイル画像" class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
+                    <!-- 画像プレースホルダー: 背景色をCyan系に変更 -->
+                    <img src="https://placehold.co/400x400/06B6D4/ffffff?text=Character+Design" alt="デザイナーのアバターまたはプロファイル画像" class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
                 </div>
             </div>
         </section>
@@ -96,40 +95,42 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">自己紹介</h2>
                 <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
-                    デザインへの情熱とこれまでの経験をご紹介します。
+                    個性的なキャラクターと独自の表現方法への情熱をご紹介します。
                 </p>
 
                 <div class="md:flex md:space-x-12 items-start">
                     <div class="md:w-1/2">
+                        <!-- 自己紹介文をキャラクター・イラストレーションに特化して修正 -->
                         <p class="mt-4 text-gray-700 leading-relaxed text-lg">
-                            私は[あなたの名前]、ユーザーインターフェース (UI)、ユーザーエクスペリエンス (UX)、そしてブランドのためのグラフィックデザインを専門とするフリーランスデザイナーです。過去[X]年間、スタートアップから大手企業まで、様々なクライアントと共に[ウェブサイト、モバイルアプリ、ブランディング]など[Y]以上のプロジェクトに携わってきました。
+                            私は[あなたの名前]、<strong class="text-primary">キャラクターデザインとイラストレーション</strong>を専門とするデザイナーです。デジタルではIllustrator、Photoshop、Clip Studioを駆使し、魅力的で生命力に満ちたキャラクターを生み出します。
                         </p>
                         <p class="mt-4 text-gray-700 leading-relaxed text-lg">
-                            私のデザイン哲学は、「シンプルさは究極の洗練である」という考えに基づいています。複雑な課題を直感的で使いやすいソリューションに落とし込むことを得意としています。デザイン思考プロセスを深く理解し、企画段階からリリース、そしてその後の改善まで、一貫してプロジェクトに関わります。
+                            また、<strong class="text-primary">透明水彩やアクリル絵の具</strong>といったアナログ素材を用いた制作も得意としており、デジタルでは表現できない温かみやテクスチャを作品に取り入れています。私の最大の強みは、<strong class="text-primary">カラフルな色彩感覚と、ターゲットに合わせて無限のバリエーションを生み出す多様なアイデア</strong>です。
                         </p>
                     </div>
                     <div class="md:w-1/2 mt-10 md:mt-0">
+                        <!-- コアバリューは維持 -->
                         <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-primary/50">私のコアバリュー</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <i class="fas fa-magic text-primary mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-palette text-primary mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h4 class="font-semibold text-lg text-gray-900">ユーザー中心</h4>
-                                    <p class="text-gray-600">常にユーザーのニーズと行動パターンを最優先します。</p>
+                                    <h4 class="font-semibold text-lg text-gray-900">カラフルな表現力</h4>
+                                    <p class="text-gray-600">観る人の感情を揺さぶる、鮮やかで計算された配色を追求します。</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-layer-group text-primary mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-lightbulb text-primary mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h4 class="font-semibold text-lg text-gray-900">視覚的調和</h4>
-                                    <p class="text-gray-600">美学と機能性が融合した、一貫性のあるデザインを提供します。</p>
+                                    <h4 class="font-semibold text-lg text-gray-900">多様なアイデア発想</h4>
+                                    <p class="text-gray-600">一つのテーマから複数の異なる方向性を提案し、クライアントの選択肢を広げます。</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-chart-line text-primary mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-hand-holding-box text-primary mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h4 class="font-semibold text-lg text-gray-900">ビジネス成果</h4>
-                                    <p class="text-gray-600">デザインを通じてクライアントのビジネス目標達成に貢献します。</p>
+                                    <h4 class="font-semibold text-lg text-gray-900">アナログとデジタルの融合</h4>
+                                    <p class="text-gray-600">デジタルツールの効率性とアナログの温かみを作品に統合します。</p>
                                 </div>
                             </li>
                         </ul>
@@ -143,45 +144,45 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">ポートフォリオ</h2>
                 <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
-                    厳選した最新のプロジェクトをご覧ください。各カードをクリックすると詳細が表示されます (今回はプレースホルダー)。
+                    キャラクターデザイン、イラストレーション、アナログ作品の厳選した最新のプロジェクトをご覧ください。
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- プロジェクト1: 画像背景色とテキスト色をピンク系に調整 -->
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト A')">
-                        <img src="https://placehold.co/600x400/F43F5E/ffffff?text=Project+A" alt="モバイルアプリUIデザインの画像" class="w-full h-56 object-cover">
+                    <!-- プロジェクト1: オリジナルキャラクターシリーズ -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト A: オリジナルキャラクターシリーズ')">
+                        <img src="https://placehold.co/600x400/06B6D4/ffffff?text=Character+Series" alt="オリジナルキャラクターデザインの画像" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">UI/UXデザイン</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">モバイルアプリ「FitFlow」</h3>
-                            <p class="text-gray-600">フィットネスと栄養管理を組み合わせた、ユーザーフレンドリーなモバイルアプリの設計。</p>
+                            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">キャラクターデザイン</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">オリジナルキャラクターシリーズ</h3>
+                            <p class="text-gray-600">異なる世界観とカラフルなテーマを持つ、一連のキャラクター開発プロジェクト。</p>
                         </div>
                     </div>
 
-                    <!-- プロジェクト2: 画像背景色をオレンジ系で維持 (アクセントカラーとして) -->
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト B')">
-                        <img src="https://placehold.co/600x400/F97316/ffffff?text=Project+B" alt="Webサイトデザインの画像" class="w-full h-56 object-cover">
+                    <!-- プロジェクト2: グッズ用キャラクターイラスト (ブランディングから変更) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト B: グッズ用キャラクターイラストレーション')">
+                        <img src="https://placehold.co/600x400/8B5CF6/ffffff?text=Merch+Illustration" alt="グッズ用キャラクターイラストレーションの画像" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">Webデザイン</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">SaaSランディングページ</h3>
-                            <p class="text-gray-600">コンバージョン率向上を目的とした、データ駆動型クラウドサービスのLP制作。</p>
+                            <!-- アクセントカラーをパープル系に変更 -->
+                            <span class="inline-block bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">キャラクターイラスト</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">グッズ用キャラクターイラストレーション</h3>
+                            <p class="text-gray-600">キーホルダーやTシャツなど、商品化を想定した高解像度のキャラクターイラスト制作事例。</p>
                         </div>
                     </div>
 
-                    <!-- プロジェクト3: 画像背景色をピンク系に調整 -->
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト C')">
-                        <img src="https://placehold.co/600x400/F43F5E/ffffff?text=Project+C" alt="ブランディングデザインの画像" class="w-full h-56 object-cover">
+                    <!-- プロジェクト3: アナログイラスト -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト C: アナログイラストレーション')">
+                        <img src="https://placehold.co/600x400/6366F1/ffffff?text=Analog+Art" alt="アナログイラストレーションの画像" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <!-- ここはメインカラーと被るので少し濃い色を残します -->
-                            <span class="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">ブランディング</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">フードブランドのCI刷新</h3>
-                            <p class="text-gray-600">ロゴ、カラースキーム、パッケージを含む総合的なコーポレートアイデンティティ (CI) の再構築。</p>
+                            <!-- アクセントカラーをIndigo系に変更 -->
+                            <span class="inline-block bg-indigo-100 text-indigo-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">アナログ作品</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">透明水彩とアクリル表現集</h3>
+                            <p class="text-gray-600">透明水彩とアクリル絵の具を用いた、テクスチャと色彩が特徴的なイラストレーションコレクション。</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="text-center mt-16">
-                    <!-- ホバーカラーを Rose 700 に変更 -->
-                    <a href="#" class="inline-flex items-center text-lg font-medium text-primary hover:text-rose-700 transition duration-300">
+                    <a href="#" class="inline-flex items-center text-lg font-medium text-primary hover:text-cyan-700 transition duration-300">
                         すべての作品を見る
                         <i class="fas fa-arrow-right ml-2 text-sm"></i>
                     </a>
@@ -195,57 +196,59 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">スキルセット</h2>
                 <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
-                    デザインと実装に必要な私の主要なツールと専門知識です。
+                    私のクリエイティビティを支える、デジタルおよびアナログの主要なツールと専門知識です。
                 </p>
 
+                <!-- スキルカードの構成 (ブランディングを削除し、7枚に再構成) -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                    <!-- スキルカード1: Figma -->
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-primary hover-lift transition duration-300">
-                        <i class="fab fa-figma text-4xl text-primary mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">Figma</h3>
-                        <p class="text-gray-600 text-sm mt-1">プロトタイピング, UI/UX設計</p>
+                    
+                    <!-- スキルカード1: キャラクターデザイン -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-red-500 hover-lift transition duration-300">
+                        <i class="fas fa-user-friends text-4xl text-red-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">キャラクターデザイン</h3>
+                        <p class="text-gray-600 text-sm mt-1">三面図, 表情・ポーズ集, 設定画</p>
                     </div>
-                    <!-- スキルカード2: Adobe Illustrator (アクセントカラー維持) -->
+
+                    <!-- スキルカード2: Illustrator -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-orange-500 hover-lift transition duration-300">
                         <i class="fas fa-palette text-4xl text-orange-500 mb-3"></i>
                         <h3 class="text-xl font-bold text-gray-900">Illustrator</h3>
-                        <p class="text-gray-600 text-sm mt-1">ロゴ, ベクターグラフィック</p>
+                        <p class="text-gray-600 text-sm mt-1">ベクターアート, デザインカンプ制作</p>
                     </div>
-                    <!-- スキルカード3: Adobe Photoshop (アクセントカラー維持) -->
+
+                    <!-- スキルカード3: Photoshop -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-blue-500 hover-lift transition duration-300">
                         <i class="fas fa-image text-4xl text-blue-500 mb-3"></i>
                         <h3 class="text-xl font-bold text-gray-900">Photoshop</h3>
-                        <p class="text-gray-600 text-sm mt-1">画像編集, 合成</p>
+                        <p class="text-gray-600 text-sm mt-1">画像加工, デジタルペイント</p>
                     </div>
-                    <!-- スキルカード4: Sketch (アクセントカラー維持) -->
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-yellow-500 hover-lift transition duration-300">
-                        <i class="fab fa-sketch text-4xl text-yellow-500 mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">Sketch</h3>
-                        <p class="text-gray-600 text-sm mt-1">Macユーザー向けデザイン</p>
+                    
+                    <!-- スキルカード4: Clip Studio Paint (プライマリカラーをCyanに更新) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-primary hover-lift transition duration-300">
+                        <i class="fas fa-paint-brush text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Clip Studio Paint</h3>
+                        <p class="text-gray-600 text-sm mt-1">線画, コミック制作, デジタル着彩</p>
                     </div>
-                    <!-- スキルカード5: HTML/CSS (アクセントカラー維持) -->
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-red-500 hover-lift transition duration-300">
-                        <i class="fab fa-html5 text-4xl text-red-500 mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">HTML & CSS</h3>
-                        <p class="text-gray-600 text-sm mt-1">フロントエンド実装理解</p>
-                    </div>
-                    <!-- スキルカード6: UXリサーチ (アクセントカラー維持) -->
+
+                    <!-- スキルカード5: アナログイラスト -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-green-500 hover-lift transition duration-300">
-                        <i class="fas fa-search text-4xl text-green-500 mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">UXリサーチ</h3>
-                        <p class="text-gray-600 text-sm mt-1">ユーザビリティテスト, 定性分析</p>
+                        <i class="fas fa-water text-4xl text-green-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">アナログイラスト</h3>
+                        <p class="text-gray-600 text-sm mt-1">透明水彩, アクリル絵の具</p>
                     </div>
-                    <!-- スキルカード7: タイポグラフィ (アクセントカラー維持) -->
+
+                    <!-- スキルカード6: 色彩設計 -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-indigo-500 hover-lift transition duration-300">
-                        <i class="fas fa-font text-4xl text-indigo-500 mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">タイポグラフィ</h3>
-                        <p class="text-gray-600 text-sm mt-1">フォント選定, レイアウト</p>
+                        <i class="fas fa-fill-drip text-4xl text-indigo-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">色彩設計</h3>
+                        <p class="text-gray-600 text-sm mt-1">配色理論, トレンドカラー活用</p>
                     </div>
-                    <!-- スキルカード8: Git (アクセントカラー維持) -->
+
+                    <!-- スキルカード7: 企画/アイデア出し -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-gray-600 hover-lift transition duration-300">
-                        <i class="fas fa-code-branch text-4xl text-gray-600 mb-3"></i>
-                        <h3 class="text-xl font-bold text-gray-900">Git/GitHub</h3>
-                        <p class="text-gray-600 text-sm mt-1">バージョン管理, 開発連携</p>
+                        <i class="fas fa-comment-dots text-4xl text-gray-600 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">企画・アイデア出し</h3>
+                        <p class="text-gray-600 text-sm mt-1">コンセプト立案, 多様な表現提案</p>
                     </div>
                 </div>
             </div>
@@ -280,8 +283,7 @@
                             <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-lg border-gray-300 border p-3 shadow-sm focus:border-primary focus:ring-primary"></textarea>
                         </div>
                         <div class="mt-8 text-center">
-                            <!-- ボタンのホバーカラーを Rose 700 に変更 -->
-                            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-rose-700 transition duration-300 transform hover-lift">
+                            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-cyan-700 transition duration-300 transform hover-lift">
                                 メッセージを送信
                             </button>
                         </div>
@@ -334,7 +336,7 @@
             <p id="modal-content" class="text-gray-600 mb-6">
                 ここでは、プロジェクトの目標、プロセス、使用した技術、そして成果について詳しく説明します。
             </p>
-            <button onclick="closeModal()" class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-rose-700 transition duration-300">
+            <button onclick="closeModal()" class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-cyan-700 transition duration-300">
                 閉じる
             </button>
         </div>
@@ -360,7 +362,7 @@
                 実際のポートフォリオでは、プロジェクトの背景、課題、デザインプロセス（スケッチ、ワイヤーフレーム、ユーザビリティテストなど）、そして最終的な成果物（解決策）を詳細に記載します。
                 <br><br>
                 <!-- モーダル内のプライマリカラーを更新 -->
-                <span class="font-semibold text-primary">使用ツール:</span> Figma, Adobe Illustrator
+                <span class="font-semibold text-primary">使用ツール:</span> Illustrator, Photoshop, Clip Studio, アナログ画材
             `;
             document.getElementById('project-modal').classList.remove('hidden');
             document.getElementById('project-modal').classList.add('flex');
