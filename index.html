@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザイナーポートフォリオ | [あなたの名前]</title>
+    <!-- Tailwind CSS CDNを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* カスタムスタイルを適用 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f7fafc; /* ライトグレーの背景 */
+        }
+        /* --- メインカラーをビビッドピンク (#F43F5E / Rose 600) に変更 --- */
+        .text-primary { color: #F43F5E; } 
+        .bg-primary { background-color: #F43F5E; }
+        .text-secondary { color: #E11D48; } /* Rose 700 */
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー/ナビゲーション -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-primary">
+                [デザイナー名]
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-primary transition duration-300">自己紹介</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-primary transition duration-300">ポートフォリオ</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary transition duration-300">スキル</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary transition duration-300">連絡先</a>
+            </div>
+            <!-- モバイルメニューボタン -->
+            <button id="menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        <!-- モバイルメニュー (非表示の状態) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="toggleMenu()">自己紹介</a>
+            <a href="#portfolio" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="toggleMenu()">ポートフォリオ</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="toggleMenu()">スキル</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="toggleMenu()">連絡先</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section id="hero" class="bg-gray-50 pt-20 pb-24 sm:pt-32 sm:pb-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+                <!-- テキストコンテンツ -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <p class="text-lg text-primary font-semibold mb-2">UI/UX & グラフィックデザイナー</p>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+                        ビジョンを<span class="text-primary">デザイン</span>します。
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600 max-w-lg">
+                        ユーザー中心の思考とクリエイティブな視点を組み合わせ、機能的かつ美しいデジタル体験を創造します。
+                    </p>
+                    <div class="mt-8 space-x-4">
+                        <!-- ボタンのホバーカラーを Rose 700 に変更 -->
+                        <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-rose-700 transition duration-300 transform hover-lift">
+                            作品を見る
+                        </a>
+                        <!-- ボタンのホバーカラーを Rose 50 に変更 -->
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-medium rounded-full text-primary bg-white hover:bg-rose-50 transition duration-300 transform hover-lift">
+                            お問い合わせ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 画像/アバター (プレースホルダー) -->
+                <div class="md:w-1/3 flex justify-center">
+                    <!-- 画像プレースホルダー: 背景色をピンク系に変更 -->
+                    <img src="https://placehold.co/400x400/F43F5E/ffffff?text=Profile" alt="デザイナーのアバターまたはプロファイル画像" class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- 自己紹介セクション -->
+        <section id="about" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">自己紹介</h2>
+                <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
+                    デザインへの情熱とこれまでの経験をご紹介します。
+                </p>
+
+                <div class="md:flex md:space-x-12 items-start">
+                    <div class="md:w-1/2">
+                        <p class="mt-4 text-gray-700 leading-relaxed text-lg">
+                            私は[あなたの名前]、ユーザーインターフェース (UI)、ユーザーエクスペリエンス (UX)、そしてブランドのためのグラフィックデザインを専門とするフリーランスデザイナーです。過去[X]年間、スタートアップから大手企業まで、様々なクライアントと共に[ウェブサイト、モバイルアプリ、ブランディング]など[Y]以上のプロジェクトに携わってきました。
+                        </p>
+                        <p class="mt-4 text-gray-700 leading-relaxed text-lg">
+                            私のデザイン哲学は、「シンプルさは究極の洗練である」という考えに基づいています。複雑な課題を直感的で使いやすいソリューションに落とし込むことを得意としています。デザイン思考プロセスを深く理解し、企画段階からリリース、そしてその後の改善まで、一貫してプロジェクトに関わります。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-primary/50">私のコアバリュー</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-magic text-primary mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">ユーザー中心</h4>
+                                    <p class="text-gray-600">常にユーザーのニーズと行動パターンを最優先します。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-layer-group text-primary mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">視覚的調和</h4>
+                                    <p class="text-gray-600">美学と機能性が融合した、一貫性のあるデザインを提供します。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-line text-primary mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">ビジネス成果</h4>
+                                    <p class="text-gray-600">デザインを通じてクライアントのビジネス目標達成に貢献します。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ポートフォリオ/作品セクション -->
+        <section id="portfolio" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">ポートフォリオ</h2>
+                <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
+                    厳選した最新のプロジェクトをご覧ください。各カードをクリックすると詳細が表示されます (今回はプレースホルダー)。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- プロジェクト1: 画像背景色とテキスト色をピンク系に調整 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト A')">
+                        <img src="https://placehold.co/600x400/F43F5E/ffffff?text=Project+A" alt="モバイルアプリUIデザインの画像" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">UI/UXデザイン</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">モバイルアプリ「FitFlow」</h3>
+                            <p class="text-gray-600">フィットネスと栄養管理を組み合わせた、ユーザーフレンドリーなモバイルアプリの設計。</p>
+                        </div>
+                    </div>
+
+                    <!-- プロジェクト2: 画像背景色をオレンジ系で維持 (アクセントカラーとして) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト B')">
+                        <img src="https://placehold.co/600x400/F97316/ffffff?text=Project+B" alt="Webサイトデザインの画像" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">Webデザイン</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">SaaSランディングページ</h3>
+                            <p class="text-gray-600">コンバージョン率向上を目的とした、データ駆動型クラウドサービスのLP制作。</p>
+                        </div>
+                    </div>
+
+                    <!-- プロジェクト3: 画像背景色をピンク系に調整 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover-lift transition duration-300" onclick="showProjectDetail('プロジェクト C')">
+                        <img src="https://placehold.co/600x400/F43F5E/ffffff?text=Project+C" alt="ブランディングデザインの画像" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <!-- ここはメインカラーと被るので少し濃い色を残します -->
+                            <span class="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">ブランディング</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">フードブランドのCI刷新</h3>
+                            <p class="text-gray-600">ロゴ、カラースキーム、パッケージを含む総合的なコーポレートアイデンティティ (CI) の再構築。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <!-- ホバーカラーを Rose 700 に変更 -->
+                    <a href="#" class="inline-flex items-center text-lg font-medium text-primary hover:text-rose-700 transition duration-300">
+                        すべての作品を見る
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- スキルセクション -->
+        <section id="skills" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">スキルセット</h2>
+                <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-16">
+                    デザインと実装に必要な私の主要なツールと専門知識です。
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- スキルカード1: Figma -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-primary hover-lift transition duration-300">
+                        <i class="fab fa-figma text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Figma</h3>
+                        <p class="text-gray-600 text-sm mt-1">プロトタイピング, UI/UX設計</p>
+                    </div>
+                    <!-- スキルカード2: Adobe Illustrator (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-orange-500 hover-lift transition duration-300">
+                        <i class="fas fa-palette text-4xl text-orange-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Illustrator</h3>
+                        <p class="text-gray-600 text-sm mt-1">ロゴ, ベクターグラフィック</p>
+                    </div>
+                    <!-- スキルカード3: Adobe Photoshop (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-blue-500 hover-lift transition duration-300">
+                        <i class="fas fa-image text-4xl text-blue-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Photoshop</h3>
+                        <p class="text-gray-600 text-sm mt-1">画像編集, 合成</p>
+                    </div>
+                    <!-- スキルカード4: Sketch (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-yellow-500 hover-lift transition duration-300">
+                        <i class="fab fa-sketch text-4xl text-yellow-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Sketch</h3>
+                        <p class="text-gray-600 text-sm mt-1">Macユーザー向けデザイン</p>
+                    </div>
+                    <!-- スキルカード5: HTML/CSS (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-red-500 hover-lift transition duration-300">
+                        <i class="fab fa-html5 text-4xl text-red-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">HTML & CSS</h3>
+                        <p class="text-gray-600 text-sm mt-1">フロントエンド実装理解</p>
+                    </div>
+                    <!-- スキルカード6: UXリサーチ (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-green-500 hover-lift transition duration-300">
+                        <i class="fas fa-search text-4xl text-green-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">UXリサーチ</h3>
+                        <p class="text-gray-600 text-sm mt-1">ユーザビリティテスト, 定性分析</p>
+                    </div>
+                    <!-- スキルカード7: タイポグラフィ (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-indigo-500 hover-lift transition duration-300">
+                        <i class="fas fa-font text-4xl text-indigo-500 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">タイポグラフィ</h3>
+                        <p class="text-gray-600 text-sm mt-1">フォント選定, レイアウト</p>
+                    </div>
+                    <!-- スキルカード8: Git (アクセントカラー維持) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-gray-600 hover-lift transition duration-300">
+                        <i class="fas fa-code-branch text-4xl text-gray-600 mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Git/GitHub</h3>
+                        <p class="text-gray-600 text-sm mt-1">バージョン管理, 開発連携</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 連絡先セクション -->
+        <section id="contact" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">お問い合わせ</h2>
+                <p class="text-xl text-gray-500 text-center max-w-3xl mx-auto mb-12">
+                    新しいプロジェクトのアイデアや協力のご相談は、お気軽にご連絡ください。
+                </p>
+
+                <div class="bg-white p-8 sm:p-12 rounded-xl shadow-2xl border-t-4 border-primary">
+                    <form id="contact-form" action="#" method="POST">
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">お名前</label>
+                                <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-lg border-gray-300 border p-3 shadow-sm focus:border-primary focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">メールアドレス</label>
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-lg border-gray-300 border p-3 shadow-sm focus:border-primary focus:ring-primary">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700">件名</label>
+                            <input type="text" name="subject" id="subject" class="mt-1 block w-full rounded-lg border-gray-300 border p-3 shadow-sm focus:border-primary focus:ring-primary">
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700">メッセージ</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-lg border-gray-300 border p-3 shadow-sm focus:border-primary focus:ring-primary"></textarea>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <!-- ボタンのホバーカラーを Rose 700 に変更 -->
+                            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-rose-700 transition duration-300 transform hover-lift">
+                                メッセージを送信
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div id="contact-message" class="hidden mt-6 p-4 rounded-lg text-center bg-green-100 text-green-700 font-medium">
+                        <!-- 成功メッセージがここに表示されます -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- ソーシャルメディアリンク -->
+                <!-- X (Twitter) -->
+                <a href="[あなたのX/Twitter URL]" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter)">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="[あなたのInstagram URL]" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <!-- LinkedIn (オプションとして維持) -->
+                <a href="[あなたのLinkedIn URL]" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm">
+                &copy; 2024 [あなたの名前]. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- ポートフォリオ詳細モーダル (簡略版) -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-xl max-w-lg w-full p-8 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-900">プロジェクト詳細</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-700 transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <!-- モーダル内のプライマリカラーを更新 -->
+            <p id="modal-content" class="text-gray-600 mb-6">
+                ここでは、プロジェクトの目標、プロセス、使用した技術、そして成果について詳しく説明します。
+            </p>
+            <button onclick="closeModal()" class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-rose-700 transition duration-300">
+                閉じる
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for interactivity
+
+        // 1. モバイルメニューのトグル機能
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.getElementById('menu-button').addEventListener('click', toggleMenu);
+
+        // 2. ポートフォリオ詳細モーダル機能
+        function showProjectDetail(title) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-content').innerHTML = `
+                これは**${title}**のシミュレーション詳細です。
+                実際のポートフォリオでは、プロジェクトの背景、課題、デザインプロセス（スケッチ、ワイヤーフレーム、ユーザビリティテストなど）、そして最終的な成果物（解決策）を詳細に記載します。
+                <br><br>
+                <!-- モーダル内のプライマリカラーを更新 -->
+                <span class="font-semibold text-primary">使用ツール:</span> Figma, Adobe Illustrator
+            `;
+            document.getElementById('project-modal').classList.remove('hidden');
+            document.getElementById('project-modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.getElementById('project-modal').classList.remove('flex');
+        }
+        
+        // モーダル外クリックで閉じる
+        document.getElementById('project-modal').addEventListener('click', function(e) {
+            if (e.target.id === 'project-modal') {
+                closeModal();
+            }
+        });
+
+        // 3. お問い合わせフォームの送信処理 (デモ用)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const messageDiv = document.getElementById('contact-message');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // 簡易的な送信中表示
+            submitButton.textContent = '送信中...';
+            submitButton.disabled = true;
+            submitButton.classList.add('opacity-50');
+
+            // フォームの内容をクリア
+            setTimeout(() => {
+                form.reset();
+                messageDiv.textContent = 'メッセージが正常に送信されました。折り返しご連絡いたします！';
+                messageDiv.classList.remove('hidden');
+                messageDiv.classList.add('bg-green-100', 'text-green-700');
+                
+                // 成功表示後にリセット
+                submitButton.textContent = 'メッセージを送信';
+                submitButton.disabled = false;
+                submitButton.classList.remove('opacity-50');
+
+                // 3秒後にメッセージを非表示にする
+                setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                }, 3000);
+            }, 1500); // 1.5秒の擬似遅延
+        });
+
+    </script>
+
+</body>
+</html>
